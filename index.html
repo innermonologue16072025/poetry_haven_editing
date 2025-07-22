@@ -3,18 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional poetry editing services to refine your verse and elevate your poetic voice.">
-    <meta name="keywords" content="poetry editing, poem editor, poetry services, chapbook editing, poetry feedback">
     <title>Poetry Haven Editing | Professional Poetry Editing Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #7a5c7a;
-            --secondary: #a38fa3;
-            --accent: #d1b9d1;
-            --light: #f9f5f9;
-            --dark: #2a1c2a;
+            --primary: #6e9e76;
+            --secondary: #d4a5a5;
+            --dark: #333333;
+            --light: #f9f9f9;
+            --accent: #8a7f8e;
             --transition: all 0.3s ease;
         }
         
@@ -25,35 +22,26 @@
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-            background-color: var(--light);
+            font-family: 'Georgia', serif;
             line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4 {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
             color: var(--dark);
+            background-color: var(--light);
         }
         
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
         }
         
         /* Header Styles */
         header {
             background-color: white;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            transition: var(--transition);
         }
         
         .header-container {
@@ -64,9 +52,8 @@
         }
         
         .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 28px;
-            font-weight: 700;
+            font-size: 1.8rem;
+            font-weight: bold;
             color: var(--primary);
             text-decoration: none;
             display: flex;
@@ -75,12 +62,6 @@
         
         .logo i {
             margin-right: 10px;
-            font-size: 24px;
-        }
-        
-        .logo span {
-            font-weight: 300;
-            color: var(--secondary);
         }
         
         nav ul {
@@ -88,11 +69,11 @@
             list-style: none;
         }
         
-        nav li {
+        nav ul li {
             margin-left: 30px;
         }
         
-        nav a {
+        nav ul li a {
             text-decoration: none;
             color: var(--dark);
             font-weight: 500;
@@ -100,127 +81,70 @@
             transition: var(--transition);
         }
         
-        nav a:hover {
-            color: var(--primary);
-        }
-        
-        nav a::after {
+        nav ul li a:after {
             content: '';
             position: absolute;
-            bottom: -5px;
-            left: 0;
             width: 0;
             height: 2px;
+            bottom: -5px;
+            left: 0;
             background-color: var(--primary);
             transition: var(--transition);
         }
         
-        nav a:hover::after {
+        nav ul li a:hover:after {
             width: 100%;
         }
         
-        .btn {
-            display: inline-block;
-            background-color: var(--primary);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        
-        .btn:hover {
-            background-color: var(--secondary);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(122, 92, 122, 0.3);
-        }
-        
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
+        nav ul li a:hover {
             color: var(--primary);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--primary);
-            color: white;
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(249, 245, 249, 0.9), rgba(249, 245, 249, 0.95)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23d1b9d1" stroke-width="0.5"/></svg>');
-            padding: 160px 0 100px;
+            padding: 150px 0 100px;
             text-align: center;
-            position: relative;
-        }
-        
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
+            background: linear-gradient(rgba(249, 249, 249, 0.9), rgba(249, 249, 249, 0.9)), url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
         }
         
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
-            line-height: 1.2;
-            color: var(--primary);
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            color: var(--dark);
+            font-weight: 400;
         }
         
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             max-width: 700px;
             margin: 0 auto 40px;
-            color: var(--dark);
+            color: var(--accent);
         }
         
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 30px;
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: var(--transition);
+            border: 2px solid var(--primary);
         }
         
-        .floating-poem {
-            position: absolute;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
-            color: rgba(122, 92, 122, 0.4);
-            max-width: 250px;
-            line-height: 1.8;
-            z-index: 1;
-            animation: float 15s infinite ease-in-out;
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary);
         }
         
-        .poem-1 {
-            top: 15%;
-            left: 5%;
-            animation-delay: 0s;
+        .btn-secondary {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
         }
         
-        .poem-2 {
-            top: 25%;
-            right: 8%;
-            animation-delay: 2s;
-        }
-        
-        .poem-3 {
-            bottom: 20%;
-            left: 10%;
-            animation-delay: 4s;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-20px) rotate(2deg); }
-            50% { transform: translateY(10px) rotate(-2deg); }
-            75% { transform: translateY(-15px) rotate(3deg); }
+        .btn-secondary:hover {
+            color: var(--secondary);
         }
         
         /* Services Section */
@@ -232,24 +156,21 @@
         .section-title {
             text-align: center;
             margin-bottom: 60px;
-        }
-        
-        .section-title h2 {
             font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--dark);
             position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
         }
         
-        .section-title h2::after {
+        .section-title:after {
             content: '';
             position: absolute;
-            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--accent);
         }
         
         .services-grid {
@@ -259,455 +180,186 @@
         }
         
         .service-card {
-            background: var(--light);
+            background-color: var(--light);
+            padding: 30px;
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: var(--transition);
             text-align: center;
-            padding: 40px 30px;
-            position: relative;
-            border: 1px solid rgba(163, 143, 163, 0.2);
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(122, 92, 122, 0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
-        .popular-badge {
-            position: absolute;
-            top: -10px;
-            right: 20px;
-            background: var(--primary);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        
-        .service-icon {
-            font-size: 50px;
+        .service-card i {
+            font-size: 3rem;
             color: var(--primary);
             margin-bottom: 20px;
         }
         
         .service-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        
-        .service-card p {
-            margin-bottom: 20px;
-            color: #555;
-        }
-        
-        .price {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin: 20px 0;
-        }
-        
-        /* Process Section */
-        .process {
-            padding: 100px 0;
-            background-color: var(--light);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .process::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path d="M40,100 C40,60 60,40 100,40 C140,40 160,60 160,100 C160,140 140,160 100,160 C60,160 40,140 40,100 Z" fill="none" stroke="%23d1b9d1" stroke-width="0.5" opacity="0.3"/></svg>');
-            opacity: 0.1;
-            z-index: 0;
-        }
-        
-        .process-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .process-steps {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 50px;
-        }
-        
-        .step {
-            width: 280px;
-            text-align: center;
-            padding: 30px;
-            position: relative;
-        }
-        
-        .step-number {
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             font-size: 1.5rem;
-            margin: 0 auto 20px;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .step h3 {
             margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-        
-        .step p {
-            color: #555;
+            color: var(--dark);
         }
         
         /* Testimonials */
         .testimonials {
             padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
             background-color: white;
-        }
-        
-        .testimonial-container {
-            max-width: 800px;
-            margin: 0 auto;
             padding: 30px;
-        }
-        
-        .testimonial {
-            background: var(--light);
-            padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             position: relative;
         }
         
-        .testimonial::before {
+        .testimonial-card:before {
             content: '"';
             position: absolute;
             top: 20px;
             left: 20px;
-            font-size: 80px;
-            font-family: serif;
-            color: var(--accent);
-            line-height: 1;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.2;
+            font-family: Georgia, serif;
         }
         
-        .testimonial p {
-            font-style: italic;
+        .testimonial-text {
             margin-bottom: 20px;
-            padding-left: 30px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
         }
         
-        .client {
-            display: flex;
-            align-items: center;
-            padding-left: 30px;
-        }
-        
-        .client-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            margin-right: 15px;
-        }
-        
-        .client-info h4 {
-            margin-bottom: 5px;
-        }
-        
-        .client-info p {
-            font-style: normal;
-            color: var(--secondary);
-            margin: 0;
-            padding: 0;
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary);
         }
         
         /* About Section */
         .about {
             padding: 100px 0;
-            background-color: var(--light);
+            background-color: white;
         }
         
         .about-content {
-            display: flex;
-            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 50px;
-        }
-        
-        .about-text {
-            flex: 1;
+            align-items: center;
         }
         
         .about-text h2 {
-            margin-bottom: 25px;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 400;
         }
         
         .about-text p {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         
         .about-image {
-            flex: 1;
-            height: 400px;
-            background: linear-gradient(135deg, var(--accent), var(--primary));
             border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            text-align: center;
-            padding: 20px;
-            position: relative;
             overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        .about-image img {
             width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="20" font-family="Arial" font-size="10" fill="white" opacity="0.3">verse</text><text x="30" y="50" font-family="Arial" font-size="10" fill="white" opacity="0.3">rhyme</text><text x="70" y="30" font-family="Arial" font-size="10" fill="white" opacity="0.3">meter</text><text x="50" y="80" font-family="Arial" font-size="10" fill="white" opacity="0.3">stanza</text></svg>');
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
         }
         
         /* Contact Section */
         .contact {
             padding: 100px 0;
-            background-color: white;
-        }
-        
-        .contact-form {
-            max-width: 700px;
-            margin: 0 auto;
-            background: var(--light);
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 16px;
-            transition: var(--transition);
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(122, 92, 122, 0.2);
-        }
-        
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        /* Stats Section */
-        .stats {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-        }
-        
-        .stat-item {
-            padding: 20px;
-        }
-        
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            font-family: 'Cormorant Garamond', serif;
-        }
-        
-        .stat-text {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        /* FAQ Section */
-        .faq {
-            padding: 100px 0;
             background-color: var(--light);
         }
         
-        .faq-container {
-            max-width: 800px;
+        .contact-content {
+            max-width: 700px;
             margin: 0 auto;
+            text-align: center;
         }
         
-        .faq-item {
-            margin-bottom: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            background: white;
+        .contact-content p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
         }
         
-        .faq-question {
-            padding: 20px;
-            background: var(--primary);
-            color: white;
-            font-weight: 600;
-            cursor: pointer;
+        .email-link {
+            display: inline-block;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+        
+        .social-links {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            display: flex;
             align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
         }
         
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-        
-        .faq-item.active .faq-answer {
-            padding: 20px;
-            max-height: 200px;
+        .social-links a:hover {
+            transform: translateY(-5px);
+            background-color: var(--secondary);
         }
         
         /* Footer */
         footer {
             background-color: var(--dark);
             color: white;
-            padding: 60px 0 30px;
+            padding: 30px 0;
+            text-align: center;
         }
         
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-column h3 {
-            color: white;
-            margin-bottom: 25px;
-            font-size: 1.5rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--accent);
-        }
-        
-        .footer-column p {
-            margin-bottom: 20px;
-            color: #ccc;
-        }
-        
-        .social-links {
             display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            display: inline-flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            color: white;
-            border-radius: 50%;
-            transition: var(--transition);
-            text-decoration: none;
-        }
-        
-        .social-links a:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-        
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-        }
-        
-        .footer-links a i {
-            margin-right: 8px;
-            width: 20px;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-            padding-left: 5px;
         }
         
         .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #aaa;
+            margin-top: 20px;
             font-size: 0.9rem;
+            opacity: 0.7;
         }
         
-        /* Responsive */
+        /* Responsive Design */
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
@@ -715,56 +367,65 @@
             }
             
             nav ul {
-                margin-top: 20px;
-                flex-wrap: wrap;
-                justify-content: center;
+                margin-top: 15px;
             }
             
-            nav li {
-                margin: 5px 10px;
+            nav ul li {
+                margin: 0 10px;
             }
             
             .hero {
-                padding: 180px 0 80px;
+                padding: 120px 0 80px;
             }
             
             .hero h1 {
                 font-size: 2.5rem;
             }
             
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .floating-poem {
-                display: none;
+            .hero p {
+                font-size: 1.2rem;
             }
             
             .about-content {
-                flex-direction: column;
+                grid-template-columns: 1fr;
             }
             
-            .about-image {
-                height: 300px;
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
             }
             
-            .step {
-                width: 100%;
-                margin-bottom: 40px;
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header id="header">
+    <header>
         <div class="container header-container">
-            <a href="#" class="logo"><i class="fas fa-pen-nib"></i>Poetry <span>Haven</span></a>
+            <a href="#" class="logo">
+                <i class="fas fa-pen-fancy"></i>
+                Poetry Haven Editing
+            </a>
             <nav>
                 <ul>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#process">Process</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -775,138 +436,38 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Elevate Your Poetry with Professional Editing</h1>
-            <p>Refine your verse with expert guidance tailored to your unique poetic voice. Poetry Haven helps poets worldwide perfect their craft.</p>
-            <div class="hero-buttons">
-                <a href="#services" class="btn">Explore Services</a>
-                <a href="#contact" class="btn btn-outline">Get Started Today</a>
-            </div>
-        </div>
-        
-        <div class="floating-poem poem-1">
-            <p>Words like whispered secrets,<br>Softly on the page,<br>Awaiting gentle guidance<br>To step upon the stage.</p>
-        </div>
-        
-        <div class="floating-poem poem-2">
-            <p>In every line a heartbeat,<br>In every pause a breath,<br>Our editors help your poetry<br>Conquer fear of death.</p>
-        </div>
-        
-        <div class="floating-poem poem-3">
-            <p>From haiku to epic verse,<br>We polish every phrase,<br>Helping your poetic vision<br>Shine in countless ways.</p>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">850+</div>
-                    <div class="stat-text">Poems Edited</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">97%</div>
-                    <div class="stat-text">Satisfaction Rate</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">42+</div>
-                    <div class="stat-text">Countries Served</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">120+</div>
-                    <div class="stat-text">Publications Achieved</div>
-                </div>
-            </div>
+            <h1>Professional Editing for Poets</h1>
+            <p>Refine your poetry and elevate your voice with expert editing services</p>
+            <a href="#services" class="btn">Explore Services</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Editing Services</h2>
-                <p>Choose the perfect service for your poetic journey</p>
-            </div>
+            <h2 class="section-title">Editing Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-feather"></i>
-                    </div>
-                    <h3>Light Touch Edit</h3>
-                    <p>Perfect for poems that need minimal refinement. Focuses on typos, grammar, and minor flow adjustments.</p>
-                    <ul style="text-align: left; padding-left: 20px; margin-bottom: 20px;">
-                        <li>Grammar & punctuation</li>
-                        <li>Spelling corrections</li>
-                        <li>Minor flow suggestions</li>
-                        <li>1 round of revisions</li>
-                    </ul>
-                    <div class="price">$45 / poem</div>
-                    <a href="#contact" class="btn">Get Started</a>
+                    <i class="fas fa-seedling"></i>
+                    <h3>Developmental Editing</h3>
+                    <p>Big-picture feedback on structure, themes, and overall flow of your poetry collection.</p>
                 </div>
                 <div class="service-card">
-                    <div class="popular-badge">MOST POPULAR</div>
-                    <div class="service-icon">
-                        <i class="fas fa-edit"></i>
-                    </div>
-                    <h3>Standard Edit</h3>
-                    <p>Comprehensive feedback on structure, rhythm, and imagery while preserving your unique voice.</p>
-                    <ul style="text-align: left; padding-left: 20px; margin-bottom: 20px;">
-                        <li>Detailed line-by-line feedback</li>
-                        <li>Rhythm & meter analysis</li>
-                        <li>Imagery enhancement</li>
-                        <li>2 rounds of revisions</li>
-                    </ul>
-                    <div class="price">$75 / poem</div>
-                    <a href="#contact" class="btn">Get Started</a>
+                    <i class="fas fa-pen"></i>
+                    <h3>Line Editing</h3>
+                    <p>Focus on language, rhythm, and poetic techniques to enhance each line and stanza.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h3>Collection Package</h3>
-                    <p>For poets preparing a chapbook or collection. Includes developmental editing and sequencing guidance.</p>
-                    <ul style="text-align: left; padding-left: 20px; margin-bottom: 20px;">
-                        <li>Full collection review</li>
-                        <li>Thematic development</li>
-                        <li>Sequencing & flow</li>
-                        <li>Publication guidance</li>
-                        <li>Unlimited revisions</li>
-                    </ul>
-                    <div class="price">$350 / collection</div>
-                    <a href="#contact" class="btn">Get Started</a>
+                    <i class="fas fa-search"></i>
+                    <h3>Copy Editing</h3>
+                    <p>Attention to grammar, punctuation, consistency, and adherence to style guidelines.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="process" class="process">
-        <div class="container process-content">
-            <div class="section-title">
-                <h2>Our Editing Process</h2>
-                <p>Simple, transparent, and designed for poets</p>
-            </div>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Submit Your Poem</h3>
-                    <p>Share your work through our secure form along with any specific concerns or goals.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Thoughtful Review</h3>
-                    <p>We carefully analyze your poem, considering rhythm, imagery, structure, and emotional impact.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Detailed Feedback</h3>
-                    <p>Receive comprehensive suggestions and edits designed to strengthen your work while preserving your voice.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Final Review</h3>
-                    <p>Review the edits, ask questions, and discuss any changes to ensure you're completely satisfied.</p>
+                <div class="service-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Proofreading</h3>
+                    <p>Final review to catch any remaining typos, formatting issues, or small errors.</p>
                 </div>
             </div>
         </div>
@@ -915,87 +476,19 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <div class="section-title">
-                <h2>Poet Testimonials</h2>
-                <p>What poets around the world are saying</p>
-            </div>
-            <div class="testimonial-container">
-                <div class="testimonial">
-                    <p>"Working with Poetry Haven transformed my collection. The editor understood my vision and helped me refine it without losing my voice. The attention to rhythm and line breaks was exceptional. My chapbook was accepted by a publisher just two months after working with them!"</p>
-                    <div class="client">
-                        <div class="client-avatar">
-                            SJ
-                        </div>
-                        <div class="client-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Published Poet, Canada</p>
-                        </div>
-                    </div>
+            <h2 class="section-title">Poet Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Working with Poetry Haven was transformative for my collection. The editor understood my vision and helped me refine it with incredible sensitivity.</p>
+                    <p class="testimonial-author">- Sarah J., Published Poet</p>
                 </div>
-            </div>
-            
-            <div class="testimonial-container" style="margin-top: 40px;">
-                <div class="testimonial">
-                    <p>"As a non-native English speaker, I was nervous about submitting my poetry. The team at Poetry Haven was incredibly supportive, not only correcting my grammar but helping me find more poetic ways to express my ideas. My poems have since been published in three literary journals!"</p>
-                    <div class="client">
-                        <div class="client-avatar">
-                            MK
-                        </div>
-                        <div class="client-info">
-                            <h4>Miguel Rodriguez</h4>
-                            <p>Emerging Poet, Mexico</p>
-                        </div>
-                    </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The line editing I received brought my poems to life in ways I hadn't imagined. My work is stronger and more musical thanks to their expertise.</p>
+                    <p class="testimonial-author">- Michael T., MFA Graduate</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq">
-        <div class="container">
-            <div class="section-title">
-                <h2>Frequently Asked Questions</h2>
-            </div>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How long does the editing process take?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Our turnaround time depends on the service and length of your work. For individual poems: Light Touch takes 2-3 business days, Standard Edit takes 4-5 business days. For collections, we typically deliver within 7-10 business days. Rush services are available for an additional fee.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What types of poetry do you edit?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We edit all forms of poetry including free verse, sonnets, haiku, villanelles, sestinas, prose poetry, experimental forms, and more. Our editors specialize in various traditions and styles from around the world.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Do I retain rights to my poetry?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutely. You retain all rights to your work. We provide a service to help improve your poetry, but the creative work remains entirely yours. We never claim ownership or rights to your poetry.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How do I submit my poems?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>After placing your order through our contact form, you'll receive a secure upload link where you can submit your poems as Word documents, PDFs, or Google Docs. We also accept handwritten work through scanned images.</p>
-                    </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">As a first-time poet, I was nervous about sharing my work. The editor was encouraging yet thorough, helping me develop confidence in my voice.</p>
+                    <p class="testimonial-author">- Elena R., Emerging Poet</p>
                 </div>
             </div>
         </div>
@@ -1004,19 +497,16 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="section-title">
-                <h2>About Poetry Haven</h2>
-            </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Poetry Haven was founded by award-winning poets and editors with over 15 years of combined experience in literary editing. We've worked with both emerging and established poets, helping refine their work for publication in prestigious journals and as collections.</p>
-                    <p>Our approach is collaborative and respectful. We believe the best editing preserves your unique voice while helping you achieve your vision for each poem.</p>
-                    <p>We specialize in various poetic forms including free verse, sonnets, haiku, and experimental poetry. Whether you're preparing for submission or working on a personal project, we're here to help your poetry shine.</p>
-                    <p>Our team includes published poets, former literary journal editors, and creative writing professors who are passionate about helping poets succeed.</p>
-                    <a href="#contact" class="btn" style="margin-top: 20px;">Get in Touch</a>
+                    <h2>About Poetry Haven Editing</h2>
+                    <p>Poetry Haven Editing was founded with a passion for poetry and a commitment to helping poets at every stage of their journey. Our editor brings years of experience in literary editing and a deep understanding of poetic craft.</p>
+                    <p>We specialize in working with both emerging and established poets, offering thoughtful, constructive feedback that respects your unique voice while helping you achieve your vision.</p>
+                    <p>Our approach is collaborative and supportive. We believe that great poetry emerges through careful attention to language, form, and emotional resonance.</p>
+                    <a href="#contact" class="btn">Start Your Poetry Journey</a>
                 </div>
                 <div class="about-image">
-                    Poetry is the rhythmical creation of beauty in words. - Edgar Allan Poe
+                    <img src="https://images.unsplash.com/photo-1542662565-7e4b66bae529?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Poetry Editing Process">
                 </div>
             </div>
         </div>
@@ -1025,40 +515,15 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="section-title">
-                <h2>Start Your Editing Journey</h2>
-                <p>Submit your poetry and we'll get back to you within 24 hours</p>
-            </div>
-            <div class="contact-form">
-                <form id="poetryForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" required placeholder="e.g. Maya Angelou">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" required placeholder="your@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="country">Country</label>
-                        <input type="text" id="country" placeholder="Where are you based?">
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Service Interested In</label>
-                        <select id="service" required>
-                            <option value="">Select a service</option>
-                            <option value="light">Light Touch Edit</option>
-                            <option value="standard">Standard Edit</option>
-                            <option value="collection">Collection Package</option>
-                            <option value="notsure">Not Sure - Need Guidance</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Tell Us About Your Project</label>
-                        <textarea id="message" required placeholder="Tell us about your poetry, your goals, and any specific concerns..."></textarea>
-                    </div>
-                    <button type="submit" class="btn">Submit Your Poetry</button>
-                </form>
+            <div class="contact-content">
+                <h2 class="section-title">Get in Touch</h2>
+                <p>Ready to refine your poetry? Have questions about our services? Reach out to discuss your project and how we can help bring your poetic vision to its fullest expression.</p>
+                <a href="mailto:poetryhavenediting@gmail.com" class="email-link">poetryhavenediting@gmail.com</a>
+                <div class="social-links">
+                    <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
         </div>
     </section>
@@ -1067,121 +532,13 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Poetry Haven</h3>
-                    <p>Professional poetry editing services to help your verse reach its full potential. Serving poets worldwide since 2018.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/poetry.haven_editing" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i>Services</a></li>
-                        <li><a href="#process"><i class="fas fa-chevron-right"></i>Editing Process</a></li>
-                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i>Testimonials</a></li>
-                        <li><a href="#about"><i class="fas fa-chevron-right"></i>About Us</a></li>
-                        <li><a href="#contact"><i class="fas fa-chevron-right"></i>Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-chevron-right"></i>Light Touch Edit</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i>Standard Edit</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i>Collection Package</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i>Publication Consultation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Info</h3>
-                    <p><i class="fas fa-envelope"></i> editing@poetryhaven.com</p>
-                    <p><i class="fas fa-globe"></i> Worldwide service</p>
-                    <p><i class="fas fa-clock"></i> Response Time: 24-48 hours</p>
-                    <p><i class="fas fa-file-alt"></i> Turnaround: 3-7 business days</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 Poetry Haven Editing. All rights reserved.</p>
-                <p style="margin-top: 10px;">Made with <i class="fas fa-heart" style="color: var(--accent);"></i> for poets worldwide</p>
+                <a href="#" class="logo">
+                    <i class="fas fa-pen-fancy"></i>
+                    Poetry Haven Editing
+                </a>
+                <p class="copyright">&copy; 2023 Poetry Haven Editing. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
-                header.style.padding = '5px 0';
-            } else {
-                header.style.boxShadow = '0 2px 15px rgba(0,0,0,0.1)';
-                header.style.padding = '';
-            }
-        });
-        
-        // Form submission handling
-        const contactForm = document.getElementById('poetryForm');
-        if(contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // In a real implementation, you would send the data to a server
-                // For this demo, we'll just show a success message
-                
-                // Create a temporary success message
-                const submitButton = this.querySelector('button[type="submit"]');
-                const originalButtonText = submitButton.innerHTML;
-                submitButton.innerHTML = '<i class="fas fa-check"></i> Thank You!';
-                submitButton.disabled = true;
-                
-                // Reset form after a delay
-                setTimeout(() => {
-                    this.reset();
-                    submitButton.innerHTML = originalButtonText;
-                    submitButton.disabled = false;
-                }, 3000);
-            });
-        }
-        
-        // FAQ accordion functionality
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            question.addEventListener('click', () => {
-                // Close other items
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                    }
-                });
-                
-                // Toggle current item
-                item.classList.toggle('active');
-            });
-        });
-    </script>
 </body>
 </html>
